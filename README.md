@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Sentinals
 Projeto Backstage
 =======
@@ -12,4 +12,3 @@ To start the app, run:
 yarn install
 yarn start
 ```
->>>>>>> 3277242 (Initial commit)
