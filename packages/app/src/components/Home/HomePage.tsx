@@ -8,11 +8,14 @@ export const HomePage = () => (
   <Page themeId="home">
     <Header title="Bem-vindo ao Sentinels Platform" subtitle="Sua plataforma Backstage personalizada" />
     <Content>
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 62 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 62 }}>
         <LogoIcon />
+        <span style={{ marginLeft: 12, fontSize: 30, fontWeight: 500, color: '#555' }}>
+          Sentinels Platform
+        </span>
       </div>
       <Grid container spacing={3} direction="row">
-        <Grid item xs={12} md={6}>
+        <Grid item xs={6} md={6}>
           <InfoCard title="Documentação">
             <p>Acesse a documentação dos seus projetos aqui.</p>
             <Button
@@ -25,7 +28,7 @@ export const HomePage = () => (
             </Button>
           </InfoCard>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={6} md={6}>
           <InfoCard title="Catálogo">
             <p>Veja todos os componentes registrados na plataforma.</p>
             <Button
