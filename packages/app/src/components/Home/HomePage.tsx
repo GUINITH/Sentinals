@@ -10,9 +10,6 @@ export const HomePage = () => (
     <Content>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 62 }}>
         <LogoIcon />
-        <span style={{ marginLeft: 12, fontSize: 30, fontWeight: 500, color: '#555' }}>
-          Sentinels Platform
-        </span>
       </div>
       <Grid container spacing={3} direction="row">
         <Grid item xs={6} md={6}>

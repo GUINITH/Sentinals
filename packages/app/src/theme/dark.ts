@@ -29,7 +29,7 @@ export const myDarkTheme = createUnifiedTheme({
         main: '#388e3c',
       },
       background: {
-        default: '#181a20', // preto/cinza escuro
+        default: '#140025', // preto/cinza escuro
         paper: '#23263a',   // cinza escuro para cards
       },
       text: {
@@ -47,7 +47,7 @@ export const myDarkTheme = createUnifiedTheme({
       warningBackground: '#332600',
       infoBackground: '#0d1b2a',
       navigation: {
-        background: '#0d1b2a', // azul escuro na barra lateral
+        background: '#140028', // azul escuro na barra lateral
         indicator: '#6c63ff',  // roxo azulado para indicador ativo
         color: '#ffffff',      // letras brancas no menu
         selectedColor: '#6c63ff',
@@ -57,26 +57,26 @@ export const myDarkTheme = createUnifiedTheme({
   defaultPageTheme: 'home',
   fontFamily: 'Comic Sans MS',
   pageTheme: {
-    home: genPageTheme({ colors: ['#1976d2', '#6c63ff'], shape: shapes.wave }),
+    home: genPageTheme({ colors: ['#140028', '#6c63ff'], shape: shapes.wave }),
     documentation: genPageTheme({
-      colors: ['#1976d2', '#6c63ff'],
+      colors: ['#140028', '#6c63ff'],
       shape: shapes.wave2,
     }),
-    tool: genPageTheme({ colors: ['#1976d2', '#6c63ff'], shape: shapes.round }),
+    tool: genPageTheme({ colors: ['#140028', '#6c63ff'], shape: shapes.round }),
     service: genPageTheme({
-      colors: ['#1976d2', '#6c63ff'],
+      colors: ['#140028', '#6c63ff'],
       shape: shapes.wave,
     }),
     website: genPageTheme({
-      colors: ['#1976d2', '#6c63ff'],
+      colors: ['#140028', '#6c63ff'],
       shape: shapes.wave,
     }),
     library: genPageTheme({
-      colors: ['#1976d2', '#6c63ff'],
+      colors: ['#140028', '#6c63ff'],
       shape: shapes.wave,
     }),
-    other: genPageTheme({ colors: ['#1976d2', '#6c63ff'], shape: shapes.wave }),
-    app: genPageTheme({ colors: ['#1976d2', '#6c63ff'], shape: shapes.wave }),
-    apis: genPageTheme({ colors: ['#1976d2', '#6c63ff'], shape: shapes.wave }),
+    other: genPageTheme({ colors: ['#140028', '#6c63ff'], shape: shapes.wave }),
+    app: genPageTheme({ colors: ['#140028', '#6c63ff'], shape: shapes.wave }),
+    apis: genPageTheme({ colors: ['#140028', '#6c63ff'], shape: shapes.wave }),
   },
 });
