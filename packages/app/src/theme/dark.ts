@@ -36,7 +36,7 @@ export const myDarkTheme = createUnifiedTheme({
         primary: '#ffffff',   // letras brancas
         secondary: '#bdbdbd', // cinza claro para textos secundários
       },
-      divider: '#6c63ff',
+      divider: '#e0e0e0',
       banner: {
         info: '#1976d2',
         error: '#d32f2f',

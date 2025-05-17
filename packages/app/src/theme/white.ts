@@ -36,7 +36,7 @@ export const myTheme = createUnifiedTheme({
         primary: '#212121',   // letras pretas
         secondary: '#424242', // cinza escuro para textos secundários
       },
-      divider: '#6c63ff', // divisórias roxo azulado
+      divider: '#e0e0e0', // divisórias roxo azulado
       banner: {
         info: '#1976d2',
         error: '#d32f2f',
