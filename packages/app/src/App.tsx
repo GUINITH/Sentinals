@@ -36,6 +36,15 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { HomePage } from './components/Home/HomePage';
+
+// Adicione estas importações:
+import { UnifiedThemeProvider } from '@backstage/theme';
+import LightIcon from '@material-ui/icons/WbSunny';
+import DarkIcon from '@material-ui/icons/Brightness2';
+import { myTheme } from './theme/white';
+import { myDarkTheme } from './theme/dark';
+
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -58,6 +67,27 @@ const app = createApp({
   components: {
     SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
   },
+  // Adicione o tema aqui:
+  themes: [
+    {
+      id: 'my-theme',
+      title: 'My Custom Theme',
+      variant: 'light',
+      icon: <LightIcon />,
+      Provider: ({ children }) => (
+        <UnifiedThemeProvider theme={myTheme}>{children}</UnifiedThemeProvider>
+      ),
+    },
+    {
+    id: 'my-dark-theme',
+    title: 'Meu Tema Escuro',
+    variant: 'dark',
+    icon: <DarkIcon />,
+    Provider: ({ children }) => (
+      <UnifiedThemeProvider theme={myDarkTheme}>{children}</UnifiedThemeProvider>
+    ),
+  },
+  ],
 });
 
 const routes = (
@@ -106,3 +136,4 @@ export default app.createRoot(
     </AppRouter>
   </>,
 );
+
