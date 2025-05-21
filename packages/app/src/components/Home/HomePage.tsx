@@ -19,7 +19,7 @@ export const HomePage = () => (
           <LogoIcon />
         </div>
         <Grid container spacing={3} direction="row" justifyContent="center">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={8} md={5}>
             <InfoCard title="Documentação">
               <p>Acesse a documentação dos seus projetos aqui.</p>
               <Button
@@ -32,7 +32,7 @@ export const HomePage = () => (
               </Button>
             </InfoCard>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={8} md={5}>
             <InfoCard title="Catálogo">
               <p>Veja todos os componentes registrados na plataforma.</p>
               <Button
@@ -45,11 +45,11 @@ export const HomePage = () => (
               </Button>
             </InfoCard>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <HomePageStarredEntities />
+          <Grid item xs={8} md={5}>
+            <HomePageStarredEntities title='Projetos Favoritos' />
           </Grid>
-          <Grid item xs={12} md={6}>
-            <HomePageToolkit tools={tools} />
+          <Grid item xs={8} md={5}>
+            <HomePageToolkit title='Links de Acesso' tools={tools} />
           </Grid>
         </Grid>
       </Content>
