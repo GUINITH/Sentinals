@@ -1,15 +1,11 @@
-/*
- * Hi!
- *
- * Note that this is an EXAMPLE Backstage backend. Please check the README.
- *
- * Happy hacking!
- */
+
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 import { createBackend } from '@backstage/backend-defaults';
+
+console.log('GITHUB_TOKEN:', process.env.GITHUB_TOKEN, typeof process.env.GITHUB_TOKEN);
 
 const backend = createBackend();
 
@@ -21,12 +17,14 @@ backend.add(import('@backstage/plugin-techdocs-backend'));
 
 // auth plugin
 backend.add(import('@backstage/plugin-auth-backend'));
+backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 // See https://backstage.io/docs/backend-system/building-backends/migrating#the-auth-plugin
 backend.add(import('@backstage/plugin-auth-backend-module-guest-provider'));
 // See https://backstage.io/docs/auth/guest/provider
 
 // catalog plugin
 backend.add(import('@backstage/plugin-catalog-backend'));
+backend.add(import('@backstage/plugin-catalog-backend-module-github-org'));
 backend.add(
   import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'),
 );
@@ -54,4 +52,5 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
+backend.add(import('@backstage/plugin-events-backend-module-github'));
 backend.start();

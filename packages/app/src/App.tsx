@@ -44,7 +44,7 @@ import LightIcon from '@material-ui/icons/WbSunny';
 import DarkIcon from '@material-ui/icons/Brightness2';
 import { myTheme } from './theme/white';
 import { myDarkTheme } from './theme/dark';
-
+import { githubAuthApiRef } from '@backstage/core-plugin-api';
 
 const app = createApp({
   apis,
@@ -66,8 +66,19 @@ const app = createApp({
     });
   },
   components: {
-    SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
-  },
+  SignInPage: props => (
+    <SignInPage
+      {...props}
+      auto
+      provider={{
+        id: 'github-auth-provider',
+        title: 'GitHub',
+        message: 'Sign in using GitHub',
+        apiRef: githubAuthApiRef,
+      }}
+    />
+  ),
+},
   // Adicione o tema aqui:
   themes: [
     {
